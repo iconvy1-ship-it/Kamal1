@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<link rel="stylesheet" href="app.css" type="text/css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Bestie: Kama 🤡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background Elements (No GIFs) -->
+    <div class="bg-shapes">
+        <div class="shape circle"></div>
+        <div class="shape square"></div>
+        <div class="shape triangle"></div>
+    </div>
+
+    <!-- Main Glassmorphism Card -->
+    <div class="card-container">
+        
+        <!-- Screen 1: The Warning -->
+        <div id="screen-1" class="screen active">
+            <div class="emoji-bounce">⚠️</div>
+            <h1>Warning!</h1>
+            <p>Yeh page sirf aur sirf is duniya ke sabse ajeeb insaan ke liye hai.</p>
+            <p>Agar tum <b>Kama</b> nahi ho, toh yahan se dafa ho jao!</p>
+            <button class="cool-btn" onclick="nextScreen(1)">Main hi Kama hoon 🙄</button>
+        </div>
+
+        <!-- Screen 2: Verification (Funny) -->
+        <div id="screen-2" class="screen">
+            <div class="emoji-spin">🕵️‍♂️</div>
+            <h2>Identity Verification</h2>
+            <p>Prove karo ki tum sach mein Kama ho. <br>Batao, tumhare paas dimaag hai?</p>
+            <div class="options">
+                <button class="cool-btn outline" onclick="wrongAnswer()">Haan, main Einstein hoon 🧠</button>
+                <button class="cool-btn outline" onclick="wrongAnswer()">Thoda bahut hai 🤔</button>
+                <button class="cool-btn" onclick="startScanner()">Nahi, main ek number ka gadha/gadhi hoon 🐴</button>
+            </div>
+            <p id="error-msg" class="error"></p>
+        </div>
+
+        <!-- Screen 3: Fake Scanning Process -->
+        <div id="screen-3" class="screen">
+            <h2>Scanning your Brain...</h2>
+            <div class="scanner-container">
+                <div class="scanner-bar" id="scan-bar"></div>
+            </div>
+            <p id="scan-text" class="scan-status">Searching for brain cells...</p>
+        </div>
+
+        <!-- Screen 4: Emotional + Funny Message (Slow Typing) -->
+        <div id="screen-4" class="screen">
+            <h2>Okay, Identity Confirmed! 🤡</h2>
+            <!-- Empty div for javascript typing effect -->
+            <div id="typewriter-text" class="type-text"></div>
+            <button id="next-to-5" class="cool-btn hidden" onclick="nextScreen(4)">Aage badho 🥺</button>
+        </div>
+
+        <!-- Screen 5: The Trap (Button Trick) -->
+        <div id="screen-5" class="screen">
+            <div class="emoji-float">🫂</div>
+            <h2>Ek Promise Karo...</h2>
+            <p>Tum zindagi bhar mere best friend rahoge, aur meri saari bakwas sunoge. Deal?</p>
+            <div class="button-group">
+                <button class="cool-btn pulse" onclick="finalScreen()">YES, humesha! 💖</button>
+                <button id="no-btn" class="cool-btn danger">No way 🏃‍♂️</button>
+            </div>
+        </div>
+
+        <!-- Screen 6: The Beautiful Finale -->
+        <div id="screen-6" class="screen">
+            <h1 class="glow-title">You're Stuck With Me, Kama! 🎉</h1>
+            <p>Jokes apart, having you as a best friend is the best thing ever. Thanks for always being there, you stupid piece of my heart. I love you bestie! ♾️</p>
+            <div id="confetti-container"></div>
+            <button class="cool-btn" onclick="alert('Ab jaa, mujhe party de! 🍕')">Claim your hug 🫂</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
